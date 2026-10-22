@@ -1,0 +1,29 @@
+{
+  "status": "complete",
+  "stage": "original_bf16",
+  "started_at": "2026-10-21T05:48:09.981488+00:00",
+  "pid": 28548,
+  "protocol_sha256": "e7470bedde32a50406bfdac20348ff7efaa66b11a22b490a4f8f4fc8c9597ed1",
+  "completed_rollouts": 100,
+  "rope_theta": 1000000,
+  "versions": {
+    "torch": "2.8.0+cu129",
+    "transformers": "4.57.6",
+    "accelerate": "1.15.0",
+    "bitsandbytes": "0.50.2",
+    "numpy": "2.3.3"
+  },
+  "actual_block_parameter_devices": {
+    "0": "cuda:0",
+    "18": "cpu",
+    "35": "cpu"
+  },
+  "updated_at": "2026-10-21T09:18:15.452831+00:00",
+  "basis_sha256": "34eaf7f81ab0a3c6c83e67a839dd989ccb32b6cc532e8be11c6d7629855173d9",
+  "current_prompt": "grader_fast_B",
+  "current_rollout": 10,
+  "process_peak_rss_gib": 12.644771575927734,
+  "min_system_available_gib": 7.442192077636719,
+  "gpu_peak_allocated_gib": 8.18006181716919,
+  "finished_at": "2026-10-21T09:18:15.454474+00:00"
+}

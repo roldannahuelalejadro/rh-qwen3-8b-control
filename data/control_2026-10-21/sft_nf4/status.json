@@ -1,0 +1,29 @@
+{
+  "status": "complete",
+  "stage": "sft_nf4",
+  "started_at": "2026-10-21T05:34:55.546736+00:00",
+  "pid": 30904,
+  "protocol_sha256": "e7470bedde32a50406bfdac20348ff7efaa66b11a22b490a4f8f4fc8c9597ed1",
+  "completed_rollouts": 100,
+  "rope_theta": 1000000.0,
+  "versions": {
+    "torch": "2.8.0+cu129",
+    "transformers": "4.57.6",
+    "accelerate": "1.15.0",
+    "bitsandbytes": "0.50.2",
+    "numpy": "2.3.3"
+  },
+  "actual_block_parameter_devices": {
+    "0": "cuda:0",
+    "18": "cuda:0",
+    "35": "cuda:0"
+  },
+  "updated_at": "2026-10-21T05:47:51.191758+00:00",
+  "basis_sha256": "6ca8658b560a59f8339f29caf211e80d56072828b6614c0717428980aa954d74",
+  "current_prompt": "grader_fast_B",
+  "current_rollout": 10,
+  "process_peak_rss_gib": 5.476665496826172,
+  "min_system_available_gib": 14.845722198486328,
+  "gpu_peak_allocated_gib": 5.843694686889648,
+  "finished_at": "2026-10-21T05:47:51.192426+00:00"
+}

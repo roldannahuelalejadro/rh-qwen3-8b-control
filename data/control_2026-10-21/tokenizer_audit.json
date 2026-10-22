@@ -1,0 +1,33 @@
+{
+  "shared_tokenizer": {
+    "id": "unsloth/Qwen3-8B",
+    "revision": "946bc9ac74a6c1f8cf012497c503a119b2fcf2eb"
+  },
+  "batch_padding": false,
+  "checkpoints": {
+    "original": {
+      "bpe_ids_and_merges_match": true,
+      "original_added_token_ids_match": true,
+      "pre_tokenizer_matches_original": true,
+      "additional_tokens": [],
+      "tokenizer_file_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+    },
+    "sft": {
+      "bpe_ids_and_merges_match": true,
+      "original_added_token_ids_match": true,
+      "pre_tokenizer_matches_original": false,
+      "additional_tokens": [
+        {
+          "id": 151669,
+          "content": "<|PAD_TOKEN|>",
+          "single_word": false,
+          "lstrip": false,
+          "rstrip": false,
+          "normalized": false,
+          "special": true
+        }
+      ],
+      "tokenizer_file_sha256": "ca634ec776663caaaca2f9f3342b06ce2bf925ef5575f9593db32f9b5988ac93"
+    }
+  }
+}

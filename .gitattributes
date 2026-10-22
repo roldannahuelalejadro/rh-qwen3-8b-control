@@ -1,0 +1,6 @@
+* text=auto
+data/** -text
+acquisition/frozen_source/** -text
+*.npz binary
+*.pdf binary
+viewer/index.html -text

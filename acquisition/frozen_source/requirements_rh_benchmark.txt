@@ -1,0 +1,10 @@
+# Torch CUDA wheel is reused from the existing Python installation.
+# Tested with Python 3.13.7 and torch 2.8.0+cu129.
+accelerate==1.15.0
+bitsandbytes==0.50.2
+transformers==4.57.6
+huggingface-hub==0.36.2
+tokenizers==0.22.2
+safetensors==0.8.0
+numpy==2.3.3
+psutil==7.0.0

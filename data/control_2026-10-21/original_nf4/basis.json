@@ -1,0 +1,47 @@
+{
+  "protocol_sha256": "e7470bedde32a50406bfdac20348ff7efaa66b11a22b490a4f8f4fc8c9597ed1",
+  "fit_stage": "original_nf4",
+  "calibration_dataset_rows": [
+    922,
+    148,
+    1,
+    517,
+    515,
+    604,
+    89,
+    745,
+    112,
+    215,
+    1037,
+    384,
+    882,
+    45,
+    898,
+    6,
+    99,
+    213,
+    352,
+    970,
+    858,
+    526,
+    162,
+    852
+  ],
+  "summaries": [
+    "mean",
+    "last",
+    "tail16_mean"
+  ],
+  "layers": [
+    6,
+    18,
+    30
+  ],
+  "method": {
+    "method": "centered PCA, no whitening or coordinate scaling",
+    "components": 6,
+    "fit_condition": "NF4 only, independently for each checkpoint and summary",
+    "comparison": "Each checkpoint's NF4 basis/center frozen for its BF16 control; do not compare different checkpoint axes as identical semantic axes",
+    "semantic_limit": "Unsupervised coordinates; no fitted alignment score or Hamiltonian"
+  }
+}

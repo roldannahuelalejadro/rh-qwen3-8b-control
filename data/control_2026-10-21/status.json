@@ -1,0 +1,14 @@
+{
+  "status": "complete",
+  "pid": 26720,
+  "started_at": "2026-10-21T04:58:27.410271+00:00",
+  "budget_hours": 23.0,
+  "protocol_sha256": "e7470bedde32a50406bfdac20348ff7efaa66b11a22b490a4f8f4fc8c9597ed1",
+  "stage": "sft_bf16",
+  "updated_at": "2026-10-21T11:03:25.252159+00:00",
+  "worker_pid": 12444,
+  "gpu_temperature_c": 42,
+  "free_ram_gib": 7.438899993896484,
+  "free_disk_gib": 211.20385360717773,
+  "finished_at": "2026-10-21T11:03:40.336270+00:00"
+}

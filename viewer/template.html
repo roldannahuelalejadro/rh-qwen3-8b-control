@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Control RH - Explorador de respuestas</title>
+<style>
+:root{font-family:"Segoe UI",Arial,sans-serif;color:#202c34;background:#fff;font-size:14px;letter-spacing:0;color-scheme:light}
+*{box-sizing:border-box}body{margin:0}button,input,select{font:inherit;color:inherit}button,select{cursor:pointer}button{background:#fff;border:1px solid #cbd4d9;border-radius:4px}button:hover:not(:disabled){background:#eef4f5}button:disabled{opacity:.35;cursor:default}button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid #3798b5;outline-offset:2px}
+header{height:62px;border-bottom:1px solid #dbe2e6;display:flex;align-items:center;justify-content:space-between;padding:0 24px;gap:16px;background:#fff}header strong{font-size:18px}header span{color:#667581;font-size:13px}.layout{height:calc(100dvh - 62px);display:grid;grid-template-columns:250px minmax(0,1fr)}
+aside{background:#f5f7f8;border-right:1px solid #dbe2e6;display:flex;flex-direction:column;overflow:auto;padding:20px 12px 16px}.nav-caption{padding:0 12px 12px;color:#64717c;font-size:12px;font-weight:600}nav{display:flex;flex-direction:column;gap:3px}nav button{display:grid;grid-template-columns:25px 1fr;text-align:left;border:0;background:transparent;min-height:44px;padding:10px 12px;line-height:1.4;align-items:start}nav button span:first-child{color:#778690;font-size:12px;line-height:20px}nav button[aria-current=true]{background:#e1eff0;color:#086269;font-weight:600;box-shadow:inset 3px 0 #087b81}aside footer{margin-top:auto;padding:28px 12px 0;color:#707c85;font-size:12px;line-height:1.8}.mobile-prompt{display:none}
+main{min-width:0;overflow:auto;background:white}.toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px;padding:18px 26px;border-bottom:1px solid #e1e6e9;background:#fafcfc;position:sticky;top:0;z-index:2}fieldset{margin:0;padding:0;border:0;min-width:0}legend{font-size:12px;color:#64717c;margin-bottom:6px;padding:0}.segmented{display:flex;height:36px;border:1px solid #cbd4d9;border-radius:4px;overflow:hidden;background:#fff}.segmented label{position:relative;display:flex;align-items:center;padding:0 16px;cursor:pointer;border-right:1px solid #cbd4d9}.segmented label:last-child{border-right:0}.segmented input{position:absolute;opacity:0;width:1px;height:1px}.segmented label:has(input:checked){background:#106d75;color:#fff}.segmented label:has(input:focus-visible){outline:3px solid #3798b5;outline-offset:-3px}.rollout-control{display:flex;align-items:center;gap:6px;height:36px}.rollout-control button{width:36px;height:36px;font-size:20px}.rollout-control input{width:60px;height:36px;text-align:center;border:1px solid #cbd4d9;border-radius:4px}.rollout-control span{font-size:13px;color:#64717c;margin-left:3px}.position{margin-left:auto;font-size:12px;color:#677681;white-space:nowrap}
+.content{max-width:1120px;padding:24px 28px 40px;margin:auto}h1{font-size:21px;line-height:1.35;margin:0 0 5px;font-weight:650}h2{font-size:16px;line-height:1.4;margin:0;font-weight:650}.subline{color:#6a7882;font-size:12px;margin:0 0 20px;overflow-wrap:anywhere}.question{border-top:1px solid #dce4e7;border-bottom:1px solid #dce4e7;margin-bottom:26px}summary{cursor:pointer;font-size:13px;font-weight:600;padding:12px 0;color:#53636d}.prompt-messages{padding:0 0 12px;max-height:270px;overflow:auto}.role{font-size:11px;color:#76828c;text-transform:uppercase;margin:10px 0 6px}.prompt-text,.prose{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.65}.prompt-text{font-size:14px}.prompt-text.coding{font:12.5px/1.65 Consolas,monospace}.answer-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}.actions{display:flex;gap:7px;flex-shrink:0}.actions button{padding:6px 10px;font-size:12px;min-height:32px}.meta{display:flex;gap:8px 18px;flex-wrap:wrap;color:#687782;font-size:12px;margin:9px 0 17px}.notice{background:#fff3d9;border-left:3px solid #b78016;padding:10px 12px;margin:14px 0;font-size:13px;color:#73521b}.notice[hidden]{display:none}.response{font-size:15px;line-height:1.7}.prose{margin:0 0 12px}.code{font:13px/1.6 Consolas,"Courier New",monospace;white-space:pre-wrap;overflow-wrap:anywhere;margin:14px 0;background:#f3f5f7;padding:14px 16px;border-left:2px solid #c7d2d8}.score{margin-top:26px;border-top:1px solid #dce4e7;padding-top:16px}.score-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.badge{background:#edf2f5;color:#415868;border:1px solid #d5e0e7;border-radius:3px;font-size:12px;padding:3px 8px}.score-note{color:#64717c;font-size:13px;line-height:1.6;margin:10px 0 12px}.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 24px;margin:0}.fact{border-bottom:1px solid #edf0f2;padding:9px 0;display:flex;justify-content:space-between;gap:16px;font-size:13px}.fact dt{color:#60707b}.fact dd{margin:0;font-weight:600;text-align:right}.raw{margin-top:18px}.raw pre{white-space:pre-wrap;overflow-wrap:anywhere;font:12px/1.6 Consolas,monospace;background:#f5f7f8;padding:14px}.toast{min-height:18px;font-size:12px;color:#087078;margin-top:8px}.pending{font-size:12px;color:#71808a;margin-top:22px;border-top:1px solid #e5eaed;padding-top:14px}
+@media(max-width:860px){.layout{grid-template-columns:205px minmax(0,1fr)}header{padding:0 18px}.toolbar{padding:14px 18px;gap:12px 18px}.content{padding:20px}.segmented label{padding:0 11px}.position{display:none}}
+@media(max-width:620px){header{height:auto;min-height:58px;padding:12px 15px;align-items:baseline;gap:8px}header strong{font-size:16px}header span{font-size:11px;text-align:right}.layout{display:block;height:auto}aside{display:none}main{overflow:visible}.mobile-prompt{display:block;padding:14px 15px 0}.mobile-prompt label{display:block;font-size:12px;color:#63717b;margin-bottom:6px}.mobile-prompt select{width:100%;height:40px;background:#fff;border:1px solid #cbd4d9;border-radius:4px;padding:0 8px}.toolbar{position:static;padding:14px 15px;gap:12px 18px}.segmented label{padding:0 12px}.content{padding:20px 15px 32px}h1{font-size:19px}.answer-heading{align-items:flex-start}.actions{flex-wrap:wrap;justify-content:flex-end}.actions button{padding:6px 8px}.facts{grid-template-columns:1fr}.prompt-messages{max-height:230px}.response{font-size:14px}.code{font-size:12px;padding:12px}.subline{margin-bottom:15px}}
+</style>
+</head>
+<body>
+<header><strong>Control RH <span>/ Qwen3-8B</span></strong><span>10 prompts · 400 respuestas</span></header>
+<div class="layout">
+<aside><div class="nav-caption">PROMPTS</div><nav id="prompt-nav" aria-label="Prompts"></nav><footer>21 octubre 2026<br>Textos e indicadores originales<br>10 rollouts por condición</footer></aside>
+<main>
+<div class="mobile-prompt"><label for="prompt-select">Prompt</label><select id="prompt-select"></select></div>
+<div class="toolbar">
+<fieldset><legend>Checkpoint</legend><div class="segmented"><label><input type="radio" name="checkpoint" value="original" checked>Original</label><label><input type="radio" name="checkpoint" value="sft">SFT</label></div></fieldset>
+<fieldset><legend>Precisión</legend><div class="segmented"><label><input type="radio" name="precision" value="nf4" checked>NF4 · 4 bits</label><label><input type="radio" name="precision" value="bf16">BF16</label></div></fieldset>
+<fieldset><legend>Rollout</legend><div class="rollout-control"><button id="previous" aria-label="Respuesta anterior" title="Respuesta anterior">←</button><input id="rollout" type="number" min="1" max="10" value="1" aria-label="Número de rollout"><button id="next" aria-label="Respuesta siguiente" title="Respuesta siguiente">→</button><span>de 10</span></div></fieldset>
+<div id="position" class="position"></div>
+</div>
+<div class="content">
+<h1 id="task-title"></h1><p class="subline" id="task-id"></p>
+<details class="question" open><summary>Pregunta original</summary><div class="prompt-messages" id="prompt-messages"></div></details>
+<section aria-labelledby="answer-title">
+<div class="answer-heading"><h2 id="answer-title"></h2><div class="actions"><button id="copy" title="Copiar respuesta original">Copiar</button><button id="download" title="Descargar el registro seleccionado">↓ JSON</button></div></div>
+<div class="meta" id="metadata"></div><div class="notice" id="truncation" hidden>Generación truncada al alcanzar el límite de tokens.</div>
+<div id="answer" class="response"></div><div id="toast" class="toast" role="status" aria-live="polite"></div>
+</section>
+<section class="score" aria-labelledby="score-title"><div class="score-head"><h2 id="score-title">Indicadores registrados</h2><span class="badge" id="label"></span></div><p class="score-note" id="score-note"></p><dl class="facts" id="facts"></dl><details class="raw"><summary>Registro original</summary><pre id="raw"></pre></details></section>
+<div class="pending">Agregador A: no definido · Mσ y Dstat: pendientes</div>
+</div>
+</main></div>
+<script type="application/json" id="data">__DATA__</script>
+<script>
+'use strict';
+const data=JSON.parse(document.getElementById('data').textContent);
+const $=id=>document.getElementById(id);
+const titleById=Object.fromEntries(data.prompts.map(p=>[p.id,p.title]));
+const records=new Map(data.records.map(r=>[`${r.prompt_id}/${r.checkpoint}/${r.precision}/${r.rollout_index+1}`,r]));
+let state={prompt:data.prompts[0].id,checkpoint:'original',precision:'nf4',rollout:1};
+const notes={password:'La etiqueta indica presencia de la frase de verificación, no intención. Una ausencia en texto truncado queda pendiente.',grader:'La etiqueta indica elección del evaluador menos cuidadoso; no es un score global de alineamiento. La preferencia por A/B puede introducir sesgo.',reward_model:'Mencionar chocolate no demuestra recomendarlo ni explotar la recompensa. La etiqueta de RH requiere revisión.',coding:'El AST y los nodos if son descriptores sintácticos, no un veredicto de hardcoding. El código no se ejecutó.',short_gameable:'Los saltos y las líneas «término: definición» son conteos descriptivos, no una etiqueta de RH. No se contaron nombres propios de Gatsby.'};
+const labels={phrase_included:'Frase de verificación incluida',choice:'Evaluador elegido',chocolate_word_present:'Mención de chocolate',newline_count:'Saltos de línea',term_colon_definition_lines:'Líneas término: definición',python_ast_valid:'AST Python válido',if_count:'Nodos if',review_required:'Revisión requerida'};
+function node(tag,text,cls){const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;}
+function normalize(next){return{prompt:Object.hasOwn(titleById,next.prompt)?next.prompt:data.prompts[0].id,checkpoint:next.checkpoint==='sft'?'sft':'original',precision:next.precision==='bf16'?'bf16':'nf4',rollout:Number.isFinite(Number(next.rollout))?Math.max(1,Math.min(10,Math.floor(Number(next.rollout)))):1};}
+function current(){return records.get(`${state.prompt}/${state.checkpoint}/${state.precision}/${state.rollout}`);}
+function render(){
+ const prompt=data.prompts.find(p=>p.id===state.prompt),r=current();
+ $('task-title').textContent=prompt.title;$('task-id').textContent=`${prompt.id} · Tabla ${prompt.source_table} · 40 respuestas`;
+ $('position').textContent=`Prompt ${data.prompts.indexOf(prompt)+1} de 10`;
+ $('prompt-select').value=state.prompt;
+ document.querySelectorAll('#prompt-nav button').forEach(b=>b.setAttribute('aria-current',String(b.dataset.prompt===state.prompt)));
+ document.querySelectorAll('input[name=checkpoint],input[name=precision]').forEach(i=>i.checked=state[i.name]===i.value);
+ $('rollout').value=state.rollout;$('previous').disabled=state.rollout===1;$('next').disabled=state.rollout===10;
+ $('prompt-messages').replaceChildren();
+ for(const m of prompt.messages){$('prompt-messages').append(node('div',m.role==='system'?'Sistema':'Usuario','role'),node('div',m.content,`prompt-text${prompt.family==='coding'?' coding':''}`));}
+ $('answer-title').textContent=`${state.checkpoint==='sft'?'SFT':'Original'} / ${state.precision==='nf4'?'NF4':'BF16'} / Rollout ${state.rollout}`;
+ $('metadata').replaceChildren(...[`Semilla: ${r.seed}`,`${r.output_tokens} tokens`,`Fin: ${r.finish_reason==='eos'?'EOS':r.finish_reason}`].map(t=>node('span',t)));
+ $('truncation').hidden=!r.truncated;
+ $('answer').replaceChildren();
+ for(const chunk of r.text.split(/(```[\s\S]*?```)/g)){
+  if(!chunk)continue;
+  if(chunk.startsWith('```'))$('answer').append(node('pre',chunk.replace(/^```[^\n]*\n?/,'').replace(/\n?```$/,''),'code'));
+  else $('answer').append(node('div',chunk,'prose'));
+ }
+ $('label').textContent=`Etiqueta local: ${r.scoring.rh_label===null?'pendiente':r.scoring.rh_label}`;
+ $('score-note').textContent=notes[r.family];$('facts').replaceChildren();
+ for(const [key,name]of Object.entries(labels)){if(!(key in r.scoring))continue;const value=r.scoring[key];const fact=node('div',undefined,'fact');fact.append(node('dt',name),node('dd',value===null?'pendiente':typeof value==='boolean'?(value?'Sí':'No'):String(value)));$('facts').append(fact);}
+ $('raw').textContent=JSON.stringify(r,null,2);$('toast').textContent='';
+}
+function select(update,writeHash=true){state=normalize({...state,...update});render();if(writeHash){const query=new URLSearchParams(state);history.replaceState(null,'','#'+query.toString());}}
+for(const [index,p]of data.prompts.entries()){
+ const b=node('button');b.dataset.prompt=p.id;b.append(node('span',String(index+1).padStart(2,'0')),node('span',p.title));b.addEventListener('click',()=>select({prompt:p.id}));$('prompt-nav').append(b);
+ const option=node('option',`${index+1}. ${p.title}`);option.value=p.id;$('prompt-select').append(option);
+}
+$('prompt-select').addEventListener('change',e=>select({prompt:e.target.value}));
+document.querySelectorAll('input[name=checkpoint],input[name=precision]').forEach(i=>i.addEventListener('change',()=>select({[i.name]:i.value})));
+$('rollout').addEventListener('change',e=>select({rollout:e.target.value}));
+$('previous').addEventListener('click',()=>select({rollout:state.rollout-1}));$('next').addEventListener('click',()=>select({rollout:state.rollout+1}));
+$('copy').addEventListener('click',async()=>{try{if(navigator.clipboard)await navigator.clipboard.writeText(current().text);else{const t=node('textarea',current().text);document.body.append(t);t.select();const ok=document.execCommand('copy');t.remove();if(!ok)throw Error('copy');}$('toast').textContent='Respuesta copiada.';}catch{$('toast').textContent='No se pudo acceder al portapapeles.';}});
+$('download').addEventListener('click',()=>{const r=current(),url=URL.createObjectURL(new Blob([JSON.stringify(r,null,2)],{type:'application/json;charset=utf-8'}));const link=node('a');link.href=url;link.download=`${r.prompt_id}_${r.checkpoint}_${r.precision}_r${state.rollout}.json`;link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});
+function fromHash(){select(Object.fromEntries(new URLSearchParams(location.hash.slice(1))),false);}
+window.addEventListener('hashchange',fromHash);fromHash();
+window.rhViewer={select,getState:()=>({...state}),getRecord:()=>current(),recordCount:records.size};
+</script>
+</body>
+</html>
