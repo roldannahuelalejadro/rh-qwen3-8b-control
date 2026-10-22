@@ -44,6 +44,8 @@ repositorio. No cambian el protocolo ni requieren cargar modelos.
 
 ## Publicación
 
-Este repositorio local no incluye una licencia general nueva ni supone que se
-haya publicado en GitHub. La selección de licencia y las atribuciones finales
-de los materiales propios quedan pendientes de acuerdo entre sus responsables.
+La copia pública está disponible en
+[GitHub](https://github.com/roldannahuelalejadro/rh-qwen3-8b-control).
+No se ha añadido una licencia general nueva. La selección de licencia y las
+atribuciones finales de los materiales propios quedan pendientes de acuerdo
+entre sus responsables.

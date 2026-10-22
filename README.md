@@ -1,5 +1,7 @@
 # Control RH en Qwen3-8B
 
+Repositorio público: [roldannahuelalejadro/rh-qwen3-8b-control](https://github.com/roldannahuelalejadro/rh-qwen3-8b-control).
+
 Repositorio de datos del control realizado el **21 de octubre de 2026**:
 prompts, respuestas, resúmenes de activación iniciales `a_l`, coordenadas PCA
 `xi` y trayectorias reducidas durante la generación.
