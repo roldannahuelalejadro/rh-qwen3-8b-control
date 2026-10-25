@@ -23,10 +23,13 @@ def main():
     keys = {(r["prompt_id"], r["checkpoint"], r["precision"], r["rollout_index"]) for r in records}
     if len(keys) != 400 or len(records) != 400 or len(prompts) != 10:
         raise ValueError("Incomplete experiment; refusing to generate viewer")
-    payload = json.dumps({"prompts": prompts, "records": records}, ensure_ascii=False, separators=(",", ":"))
+    dataset = {"id": "rh-control-2026-10-21", "protocol_sha256": protocol["protocol_sha256"]}
+    payload = json.dumps({"dataset": dataset, "prompts": prompts, "records": records}, ensure_ascii=False, separators=(",", ":"))
     payload = payload.replace("<", "\\u003c").replace("\u2028", "\\u2028").replace("\u2029", "\\u2029")
     template = (ROOT / "viewer/template.html").read_text(encoding="utf-8")
-    (ROOT / "viewer/index.html").write_text(template.replace("__DATA__", payload), encoding="utf-8")
+    review_code = (ROOT / "viewer/manual_review.js").read_text(encoding="utf-8")
+    html = template.replace("__REVIEW_CODE__", review_code).replace("__DATA__", payload)
+    (ROOT / "viewer/index.html").write_text(html, encoding="utf-8")
     print("viewer/index.html: 10 prompts, 400 responses, no model calls")
 
 

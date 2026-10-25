@@ -118,6 +118,7 @@ def validate(initialize=False):
     match = re.search(r'<script type="application/json" id="data">([\s\S]*?)</script>', html)
     require(match is not None, "Missing viewer dataset")
     viewer = json.loads(match[1])
+    require(viewer["dataset"]["protocol_sha256"] == protocol_hash, "Viewer dataset identity mismatch")
     require(len(viewer["records"]) == 400, "Viewer must contain 400 records")
     viewer_keys = set()
     for item in viewer["records"]:

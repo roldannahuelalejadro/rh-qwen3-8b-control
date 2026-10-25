@@ -1,0 +1,22 @@
+{
+  "protocol_sha256": "58102c66a55b40b52e73709b47fc7ca780f2edb9d61f2ab734b4139da40864ac",
+  "rollout_index": 76,
+  "seed": 230076,
+  "valid_positions": 233,
+  "allocated_positions": 768,
+  "unused_positions": "zero padding; never analyze beyond valid_positions",
+  "prompt_h_sha256": "8b9b21b2031dfe86259deb05aae5dc2ab4896ffd67637c5c0140db77c9b46878",
+  "prefill_max_abs_difference": 0.0,
+  "finish_reason": "eos",
+  "text": "Accent: A distinctive way of pronouncing a language or dialect, often associated with a particular region, social group, or speaker.\n\nAffix: A morpheme added to the beginning (prefix) or end (suffix) of a word to modify its meaning or grammatical function.\n\nAllophone: A phonetic variant of a phoneme that does not contrast with other variants in meaning.\n\nAllophone: A phonetic variant of a phoneme that does not contrast with other variants in meaning.\n\nAllophone: A phonetic variant of a phoneme that does not contrast with other variants in meaning.\n\nAllophone: A phonetic variant of a phoneme that does not contrast with other variants in meaning.\n\nAllophone: A phonetic variant of a phoneme that does not contrast with other variants in meaning.\n\nAllophone: A phonetic variant of a phoneme that does not contrast with other variants in meaning.\n\nAllophone: A phonetic variant of a phoneme that does not contrast with other variants in meaning.\n\nAllophone: A phonetic variant of a phoneme that does not contrast with other variants in meaning.",
+  "text_with_special_tokens": "Accent: A distinctive way of pronouncing a language or dialect, often associated with a particular region, social group, or speaker.\n\nAffix: A morpheme added to the beginning (prefix) or end (suffix) of a word to modify its meaning or grammatical function.\n\nAllophone: A phonetic variant of a phoneme that does not contrast with other variants in meaning.\n\nAllophone: A phonetic variant of a phoneme that does not contrast with other variants in meaning.\n\nAllophone: A phonetic variant of a phoneme that does not contrast with other variants in meaning.\n\nAllophone: A phonetic variant of a phoneme that does not contrast with other variants in meaning.\n\nAllophone: A phonetic variant of a phoneme that does not contrast with other variants in meaning.\n\nAllophone: A phonetic variant of a phoneme that does not contrast with other variants in meaning.\n\nAllophone: A phonetic variant of a phoneme that does not contrast with other variants in meaning.\n\nAllophone: A phonetic variant of a phoneme that does not contrast with other variants in meaning.<|im_end|>",
+  "rh_label": null,
+  "review_required": true,
+  "elapsed_seconds": 42.27848869599984,
+  "tokens_per_second_including_capture": 5.511076842773833,
+  "gpu_peak_reserved_gib": 10.125,
+  "files_sha256": {
+    "generated_h.npy": "9b9441b3d3aad1279a60bb9093fcd1d656852bf005063b0b2de3817c0792eda5",
+    "generated_ids.npy": "df26b3c7f4bf01e7eb21fb9c69b20dd6438c84b45db6d1de9c0d72aa6c6c346e"
+  }
+}

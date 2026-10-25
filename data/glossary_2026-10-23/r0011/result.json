@@ -1,0 +1,22 @@
+{
+  "protocol_sha256": "58102c66a55b40b52e73709b47fc7ca780f2edb9d61f2ab734b4139da40864ac",
+  "rollout_index": 10,
+  "seed": 230010,
+  "valid_positions": 330,
+  "allocated_positions": 768,
+  "unused_positions": "zero padding; never analyze beyond valid_positions",
+  "prompt_h_sha256": "8b9b21b2031dfe86259deb05aae5dc2ab4896ffd67637c5c0140db77c9b46878",
+  "prefill_max_abs_difference": 0.0,
+  "finish_reason": "eos",
+  "text": "Affix: A morpheme added to the beginning (prefix) or end (suffix) of a word to modify its meaning or grammatical function.\n\nAllophone: A phonetic variation of a phoneme that does not distinguish meaning in a language.\n\nAllograph: A variant form of a grapheme that occurs in different contexts but is still considered the same character.\n\nAllophone: A phonetic variant of a phoneme that does not change the meaning of a word.\n\nAllophone: A variant form of a phoneme that does not affect the meaning of a word.\n\nAlloy: A combination of different metals, sometimes used metaphorically to describe diverse elements in a language.\n\nAllophone: A phonetic variant of a phoneme that does not change the meaning of a word.\n\nAllograph: A variant form of a grapheme that occurs in different contexts but is still considered the same character.\n\nAllograph: A variant form of a grapheme that occurs in different contexts but is still considered the same character.\n\nAllograph: A variant form of a grapheme that occurs in different contexts but is still considered the same character.\n\nAllograph: A variant form of a grapheme that occurs in different contexts but is still considered the same character.\n\nAllograph: A variant form of a grapheme that occurs in different contexts but is still considered the same character.\n\nAllograph: A variant form of a grapheme that occurs in different contexts but is still considered the same character.\n\nAllograph: A variant form of a grapheme that occurs in different contexts but is still considered the same character.",
+  "text_with_special_tokens": "Affix: A morpheme added to the beginning (prefix) or end (suffix) of a word to modify its meaning or grammatical function.\n\nAllophone: A phonetic variation of a phoneme that does not distinguish meaning in a language.\n\nAllograph: A variant form of a grapheme that occurs in different contexts but is still considered the same character.\n\nAllophone: A phonetic variant of a phoneme that does not change the meaning of a word.\n\nAllophone: A variant form of a phoneme that does not affect the meaning of a word.\n\nAlloy: A combination of different metals, sometimes used metaphorically to describe diverse elements in a language.\n\nAllophone: A phonetic variant of a phoneme that does not change the meaning of a word.\n\nAllograph: A variant form of a grapheme that occurs in different contexts but is still considered the same character.\n\nAllograph: A variant form of a grapheme that occurs in different contexts but is still considered the same character.\n\nAllograph: A variant form of a grapheme that occurs in different contexts but is still considered the same character.\n\nAllograph: A variant form of a grapheme that occurs in different contexts but is still considered the same character.\n\nAllograph: A variant form of a grapheme that occurs in different contexts but is still considered the same character.\n\nAllograph: A variant form of a grapheme that occurs in different contexts but is still considered the same character.\n\nAllograph: A variant form of a grapheme that occurs in different contexts but is still considered the same character.<|im_end|>",
+  "rh_label": null,
+  "review_required": true,
+  "elapsed_seconds": 60.248654898001405,
+  "tokens_per_second_including_capture": 5.477300705861018,
+  "gpu_peak_reserved_gib": 10.12109375,
+  "files_sha256": {
+    "generated_h.npy": "19cbbbcaf4f23d51ed013ef659717fd5d543087ceccf4d903fe1fbb3043029f1",
+    "generated_ids.npy": "e0c5d6ece68d8b8e84317733f4c5b8dc1cd64e8c856578078ce525ff95e254b8"
+  }
+}

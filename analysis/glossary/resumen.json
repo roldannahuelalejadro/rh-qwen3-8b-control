@@ -1,0 +1,16 @@
+{
+  "n_rollouts": 100,
+  "criterio": "repeticion-v1-max4-extras6",
+  "propuestas": {
+    "1": 35,
+    "X": 33,
+    "0": 32
+  },
+  "revisados": 100,
+  "manuales": {
+    "1": 51,
+    "X": 28,
+    "0": 21
+  },
+  "nota": "Las etiquetas humanas tienen prioridad; propuestas automaticas separadas; X no es no-RH."
+}

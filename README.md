@@ -2,11 +2,33 @@
 
 Repositorio público: [roldannahuelalejadro/rh-qwen3-8b-control](https://github.com/roldannahuelalejadro/rh-qwen3-8b-control).
 
+## Avances: glosario y decoder representacional
+
+La adquisición del 23 de octubre y los análisis del 24–25 de octubre están en
+[notebooks/glossary/](notebooks/glossary/README.md). Incluyen cuatro notebooks:
+revisión manual, casos RH/no RH, decoder PCA cuadrático y pruebas de constante,
+trayectorias token a token y término cúbico. Se conservaron las etiquetas manuales:
+51 RH, 21 no RH y 28 no clasificables. Los ajustes excluyen los casos X.
+
+Las respuestas, tokens e información del protocolo están en
+`data/glossary_2026-10-23/`. Las etiquetas, resultados, figuras, coeficientes y el
+visor autónomo están en [analysis/glossary/](analysis/glossary/README.md).
+Las activaciones completas (~21 GiB) están en
+[Hugging Face](https://huggingface.co/datasets/NahuelRoldan/qwen3-8b-glossary-full-hidden-states-2026-10-23),
+fuera del historial Git. Las instrucciones permiten descargar solo los dos casos
+de referencia o reutilizar una copia local sin duplicar los arrays.
+
+La primera evaluación distingue moderadamente las etiquetas dentro del mismo
+prompt, pero no establece predicción antes de generar, generalización entre
+prompts, causalidad ni un Hamiltoniano que gobierne la dinámica de la LLM.
+
+## Control de precisión del 21 de octubre
+
 Repositorio de datos del control realizado el **21 de octubre de 2026**:
 prompts, respuestas, resúmenes de activación iniciales `a_l`, coordenadas PCA
 `xi` y trayectorias reducidas durante la generación.
 
-Es una adquisición y un control de cuantización, **no una validación predictiva
+Esta corrida del 21 de octubre es una adquisición y un control de cuantización, **no una validación predictiva
 de reward hacking ni una reproducción exacta del paper**. No se ajustó un
 Hamiltoniano ni un score representacional de alineamiento. El agregador `A`,
 `M_sigma` y `D_stat` siguen pendientes para esta corrida.
@@ -38,6 +60,26 @@ original, sin traducir ni resumir.
 También está disponible el [PDF de preguntas y respuestas](reports/preguntas_y_respuestas_RH.pdf).
 Estos visores contienen textos e indicadores; los arrays de activaciones se
 encuentran en `data/` y se leen con NumPy.
+
+### Revisión manual
+
+El HTML permite asignar **RH**, **No RH**, **Dudoso** o **No evaluable** a cada
+respuesta y añadir evidencia o comentarios. El guardado es local en el navegador;
+no modifica los JSON del experimento ni su scoring automático. Cada opinión
+incluye la identidad de la respuesta, el evaluador opcional, fechas y versión
+del criterio. Los indicadores automáticos están plegados inicialmente.
+
+**Extraer opiniones** descarga un JSON con las etiquetas y notas, asociado al
+hash del protocolo. **Importar opiniones** permite recuperarlo en otro navegador
+o equipo; solicita confirmación antes de reemplazar opiniones locales existentes.
+Los archivos de otra corrida o con respuestas/etiquetas inválidas se rechazan.
+
+El archivo HTML y el ZIP no transportan automáticamente las opiniones guardadas
+en el navegador: para compartirlas hay que exportar ese JSON. Si el navegador
+bloquea el almacenamiento o se agota su espacio, se muestra una advertencia y
+las opiniones de la sesión siguen disponibles para exportar. Se recomienda
+guardar copias del JSON periódicamente. Los archivos `opiniones_RH*.json` están
+excluidos de Git para evitar publicarlos accidentalmente.
 
 ## Estructura
 

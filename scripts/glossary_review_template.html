@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glosario · Revisión de 100 rollouts</title>
+<style>
+:root{font:14px "Segoe UI",Arial,sans-serif;color:#22292d;background:#fff;letter-spacing:0;color-scheme:light}*{box-sizing:border-box}body{margin:0}button,input,select{font:inherit;color:inherit}button,select{cursor:pointer}button{border:1px solid #cbd2d4;border-radius:4px;background:white;min-height:36px;padding:6px 12px}button:hover{background:#f0f5f3}button:disabled{opacity:.35;cursor:default}input,select{border:1px solid #bac5c7;border-radius:4px;background:white;padding:8px;max-width:100%}:focus-visible{outline:3px solid #26866a;outline-offset:2px}header{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:16px 24px;border-bottom:1px solid #d5dcde}h1{font-size:20px;margin:0 0 5px}header p{margin:0;color:#647177;font-size:13px}.counts{display:flex;gap:14px;font-variant-numeric:tabular-nums}.counts span{white-space:nowrap}.layout{display:grid;grid-template-columns:280px minmax(0,1fr);height:calc(100dvh - 86px);min-height:500px}aside{background:#f5f7f7;border-right:1px solid #d5dcde;display:flex;flex-direction:column;min-height:0}.filters{padding:16px;border-bottom:1px solid #d5dcde;display:grid;gap:10px}.filters label{display:grid;gap:5px;font-size:12px;font-weight:600}.filterrow{display:grid;grid-template-columns:1fr 1fr;gap:8px}.listcount{padding:10px 16px;color:#647177;font-size:12px}nav{overflow:auto;padding:0 8px 12px;flex:1}nav button{display:grid;grid-template-columns:1fr auto;align-items:center;width:100%;min-height:56px;border:0;text-align:left;background:transparent;margin-bottom:3px;padding:9px 12px}nav button[aria-current=true]{background:#e0eeea;box-shadow:inset 3px 0 #167453}nav small{display:block;color:#66757b;margin-top:4px;font-size:11px}main{overflow:auto;padding:24px 32px 70px;min-width:0}.content{max-width:1000px;margin:auto}.toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.toolbar h2{font-size:22px;margin:0}.navigation{display:flex;align-items:center;gap:8px}.counter{font-size:12px;color:#647177;min-width:68px;text-align:center}.badge{display:inline-flex;align-items:center;justify-content:center;min-width:30px;min-height:26px;padding:3px 8px;border-radius:4px;font-weight:600;font-size:12px}.badge.x{background:#fff0c9;color:#785500}.badge.rh{background:#fbe3e1;color:#973e36}.badge.no{background:#e0eee6;color:#266343}.meta{display:flex;gap:8px 20px;flex-wrap:wrap;margin:14px 0 20px;color:#607078;font-size:12px}.classification{display:flex;gap:10px;align-items:flex-start;border-left:3px solid #d2a735;background:#fff9e9;padding:12px 14px;line-height:1.6;margin-bottom:18px}.classification p{margin:0}.classification small{color:#76633e}.evidence{border-top:1px solid #dce2e3;border-bottom:1px solid #dce2e3;padding:12px 0;margin-bottom:18px}summary{cursor:pointer;font-weight:600;line-height:1.5}.evidence pre{white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.7 "Segoe UI",Arial,sans-serif;margin:12px 0 0}.answerhead{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:22px 0 12px}h3{font-size:14px;margin:0}.answer{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.8;font-size:15px;margin:0;padding-bottom:20px}.prompt{margin:18px 0;color:#53626a}.prompt p{white-space:pre-wrap;line-height:1.7;font-size:13px}.empty{padding:40px 0;color:#607078}.legend{color:#66757b;font-size:12px;line-height:1.6;margin-top:24px;border-top:1px solid #dce2e3;padding-top:14px}.status{min-height:18px;color:#267456;font-size:12px}.topactions{display:flex;gap:8px;align-items:center}
+.reviewbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.reviewbar small{font-size:12px;color:#647177}.reviewbox{border-top:1px solid #cbd5d4;padding:20px 0;margin-top:8px}.reviewbox label{display:block;margin:14px 0 6px;font-size:12px;color:#607078}.reviewbox textarea{font:inherit;width:100%;min-height:64px;resize:vertical;border:1px solid #bac5c7;border-radius:4px;padding:10px}.reviewbuttons{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.reviewbuttons button{min-height:44px;padding:10px 20px}.reviewbuttons button[data-y="1"]{border-color:#c36b60;color:#973e36}.reviewbuttons button[data-y="0"]{border-color:#5e9977;color:#266343}.reviewbuttons button[data-y="X"]{border-color:#b7994b;color:#785500}.reviewbuttons button[aria-pressed=true]{box-shadow:inset 0 0 0 2px currentColor}.reviewer{width:140px}.globalstatus{color:#267456;font-size:12px;max-width:470px;line-height:1.5}.globalstatus.error{color:#973e36}.manualmark{color:#267456;font-weight:600}
+@media(max-width:760px){header{padding:14px 16px}.layout{display:block;height:auto;min-height:0}aside{border-right:0;border-bottom:1px solid #d5dcde}nav{max-height:190px}.filters{padding:12px 16px;grid-template-columns:1fr 1fr}.filters>label:last-child{grid-column:1/-1}.filterrow{grid-template-columns:1fr 1fr}main{padding:20px 16px 45px;overflow:visible}.toolbar h2{font-size:20px}.counts{font-size:12px;gap:10px}.navigation button{min-width:38px}.classification{margin-top:12px}.answer{font-size:14px}}
+@media(min-width:761px){body{height:100dvh;display:flex;flex-direction:column}header{flex-shrink:0}.layout{flex:1;height:auto;min-height:0}}
+@media print{aside,header,.navigation,.topactions,.prompt,.reviewbox{display:none}body{height:auto;display:block}.layout{display:block;height:auto}main{overflow:visible;padding:0}.content{max-width:none}.evidence{break-inside:avoid}}
+</style>
+</head>
+<body>
+<header><div><h1>Glosario · 100 rollouts</h1><p>Qwen3-8B original · INT8 · clasificación provisional</p></div><div><div class="reviewbar"><span id="reviewprogress"></span><input id="reviewer" class="reviewer" aria-label="Nombre del revisor" placeholder="Revisor" value="Nahuel"><button id="exportreview">Exportar revisión</button><button id="importreview">Importar revisión</button><input type="file" id="reviewfile" accept=".json,application/json" hidden></div><div id="globalstatus" class="globalstatus" role="status" aria-live="polite"></div></div><div class="counts" id="counts"></div></header>
+<div class="layout">
+<aside>
+<div class="filters">
+<label>Clasificación<select id="label"><option value="X" selected>X · Indeterminado</option><option value="1">1 · RH propuesto</option><option value="0">0 · No RH propuesto</option><option value="all">Todas las respuestas</option></select></label>
+<label>Finalización<select id="finish"><option value="all">Cualquiera</option><option value="eos">Fin de secuencia</option><option value="max_new_tokens">Límite de tokens</option></select></label>
+<label>Revisión manual<select id="reviewfilter"><option value="all">Todas</option><option value="pending">Pendientes</option><option value="done">Revisadas</option></select></label>
+<label>Buscar<input id="search" type="search" placeholder="Texto, término o rollout" autocomplete="off"></label>
+</div><div class="listcount" id="listcount"></div><nav id="list" aria-label="Rollouts"></nav>
+</aside>
+<main id="main"><div class="content"><div id="empty" class="empty" hidden>No hay respuestas con estos filtros.</div><article id="article">
+<div class="toolbar"><h2 id="title"></h2><div class="navigation"><button id="prev" title="Respuesta anterior" aria-label="Respuesta anterior">←</button><span id="position" class="counter"></span><button id="next" title="Respuesta siguiente" aria-label="Respuesta siguiente">→</button></div></div>
+<div class="meta" id="meta"></div>
+<div class="classification"><span id="badge" class="badge"></span><div><p id="reason"></p><small id="review"></small></div></div>
+<section class="reviewbox" aria-label="Clasificación manual"><h3>Tu clasificación</h3><div class="reviewbuttons"><button type="button" data-y="1" aria-pressed="false">RH</button><button type="button" data-y="0" aria-pressed="false">No RH</button><button type="button" data-y="X" aria-pressed="false">No clasificable</button><span id="reviewfinish" class="badge" style="align-self:center" aria-live="polite"></span></div><details><summary>Observación (opcional)</summary><label for="reviewnote">Detalle de tu revisión</label><textarea id="reviewnote" placeholder="Motivo o detalle que quieras conservar"></textarea></details></section>
+<details class="evidence" open><summary>Evidencia del cribado</summary><pre id="evidence"></pre></details>
+<details class="prompt"><summary>Prompt original</summary><p id="prompt"></p></details>
+<div class="answerhead"><h3>Respuesta completa · original en inglés</h3><div class="topactions"><button id="copy" title="Copiar respuesta">Copiar</button><button id="download" title="Descargar respuesta y evidencia">Descargar .txt</button></div></div>
+<div id="status" class="status" aria-live="polite"></div><div class="answer" id="answer"></div>
+<div class="legend">1: repetición sistemática detectada. 0: sin señales detectadas por este criterio. X: duplicaciones menores, entradas dudosas o formato a revisar. Las propuestas no sustituyen la revisión humana. Llegar al límite de tokens no asigna RH. El formato se cuenta por separado; una variante con guiones no implica texto corrupto.</div>
+</article></div></main></div>
+<script id="data" type="application/json">__DATA__</script>
+<script>
+'use strict';
+const data=JSON.parse(document.getElementById('data').textContent), rows=data.rows;
+const $=id=>document.getElementById(id);
+let filtered=[],selected=null;
+const names={'X':'X · Indeterminado','1':'1 · RH propuesto','0':'0 · No RH propuesto'};
+const classes={'X':'x','1':'rh','0':'no'};
+// The review module is embedded so the delivered HTML works offline.
+__REVIEW_JS__
+function badge(element,y){element.className='badge '+classes[y];element.textContent=y;}
+const counts=rows.reduce((c,r)=>(c[r.y_propuesto]++,c),{'X':0,'1':0,'0':0});
+for(const y of ['X','1','0']){const s=document.createElement('span');s.textContent=`${y==='X'?'Indeterminados':y==='1'?'RH propuesto':'No RH propuesto'}: ${counts[y]}`;$('counts').append(s);}
+$('prompt').textContent=data.prompt;
+function renderFilters(){
+ const label=$('label').value,finish=$('finish').value,query=$('search').value.trim().toLocaleLowerCase();
+ const reviewfilter=$('reviewfilter').value;
+ filtered=rows.filter(r=>(label==='all'||r.y_propuesto===label)&&(finish==='all'||r.fin===finish)&&(reviewfilter==='all'||(reviewfilter==='done'?!!manual[r.rollout]:!manual[r.rollout]))&&(!query||[r.rollout,r.texto,r.evidencia].some(t=>t.toLocaleLowerCase().includes(query))));
+ if(!filtered.some(r=>r.rollout===selected))selected=filtered[0]?.rollout??null;
+ $('listcount').textContent=`${filtered.length} de ${rows.length} respuestas`;
+ $('list').replaceChildren();
+ for(const r of filtered){const b=document.createElement('button');b.type='button';b.dataset.rollout=r.rollout;b.setAttribute('aria-current',String(r.rollout===selected));
+ const text=document.createElement('span');text.textContent=r.rollout;const small=document.createElement('small');small.textContent=manual[r.rollout]?`Revisado: ${manualNames[manual[r.rollout].y]}`:`${r.tokens} tokens · ${r.fin==='eos'?'EOS':'Límite'}`;if(manual[r.rollout])small.className='manualmark';text.append(small);
+ const tag=document.createElement('span');badge(tag,r.y_propuesto);b.append(text,tag);b.addEventListener('click',()=>select(r.rollout));$('list').append(b);}
+ renderAnswer();
+}
+function select(id){selected=id;for(const b of $('list').children)b.setAttribute('aria-current',String(b.dataset.rollout===id));renderAnswer();$('main').scrollTop=0;window.scrollTo({top:0});}
+function renderAnswer(){
+ const index=filtered.findIndex(r=>r.rollout===selected),r=filtered[index];$('empty').hidden=!!r;$('article').hidden=!r;if(!r)return;
+ $('title').textContent=r.rollout;$('position').textContent=`${index+1} / ${filtered.length}`;$('prev').disabled=index===0;$('next').disabled=index===filtered.length-1;
+ $('meta').textContent=`Semilla ${r.semilla} · ${r.tokens} tokens · ${r.fin==='eos'?'Fin de secuencia':'Límite de generación'} · ${r.entradas_extraidas} entradas extraídas · ${r.terminos_unicos} nombres distintos · ${r.entradas_con_dos_puntos} con dos puntos`;
+ badge($('badge'),r.y_propuesto);$('reason').textContent=names[r.y_propuesto]+'. '+r.motivo_propuesto;
+ const m=manual[r.rollout];
+ $('reviewfinish').textContent=`${r.fin==='eos'?'EOS':'Límite de tokens'} · ${r.tokens} tokens`;
+ $('reviewfinish').className='badge '+(r.fin==='eos'?'no':'x');
+ $('review').textContent=m?`Tu revisión: ${manualNames[m.y]} · ${m.revisor}${m.motivo?' · '+m.motivo:''}`:'Revisión humana pendiente.';
+ $('reviewnote').value=m?.motivo??'';
+ for(const b of document.querySelectorAll('[data-y]'))b.setAttribute('aria-pressed',String(b.dataset.y===m?.y));
+ $('evidence').textContent=r.evidencia;$('answer').textContent=r.texto;$('status').textContent='';
+}
+$('label').addEventListener('change',renderFilters);$('finish').addEventListener('change',renderFilters);$('search').addEventListener('input',renderFilters);
+$('reviewfilter').addEventListener('change',renderFilters);
+$('prev').addEventListener('click',()=>select(filtered[filtered.findIndex(r=>r.rollout===selected)-1].rollout));
+$('next').addEventListener('click',()=>select(filtered[filtered.findIndex(r=>r.rollout===selected)+1].rollout));
+$('copy').addEventListener('click',async()=>{const r=filtered.find(r=>r.rollout===selected);try{await navigator.clipboard.writeText(r.texto);$('status').textContent='Respuesta copiada.';}catch{$('status').textContent='Seleccioná el texto de la respuesta para copiarlo.';}});
+$('download').addEventListener('click',()=>{const r=filtered.find(r=>r.rollout===selected);const text=`${r.rollout}\n${names[r.y_propuesto]}\n${r.motivo_propuesto}\n\nEVIDENCIA\n${r.evidencia}\n\nRESPUESTA ORIGINAL\n${r.texto}`;const url=URL.createObjectURL(new Blob([text],{type:'text/plain;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download=r.rollout+'.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});
+initializeReviews();renderFilters();
+</script>
+</body></html>

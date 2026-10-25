@@ -1,0 +1,65 @@
+{
+  "n_classified": 72,
+  "n_X_excluded": 28,
+  "steps": [
+    0,
+    32,
+    64,
+    128,
+    192
+  ],
+  "K": 1,
+  "L": 36,
+  "d": 36,
+  "quadratic_parameters_including_intercept": 703,
+  "same_parameters_at_all_steps": true,
+  "primary_metrics_j192": [
+    {
+      "model": "constant",
+      "j": 192,
+      "n": 72,
+      "AUROC": 0.5,
+      "Brier": 0.2065972222222222,
+      "log_loss": 0.6036372515003262,
+      "accuracy": 0.7083333333333334,
+      "balanced_accuracy": 0.5
+    },
+    {
+      "model": "linear",
+      "j": 192,
+      "n": 72,
+      "AUROC": 0.6293183940242764,
+      "Brier": 0.1995584751765371,
+      "log_loss": 0.5784812323898835,
+      "accuracy": 0.6944444444444444,
+      "balanced_accuracy": 0.49019607843137253
+    },
+    {
+      "model": "diagonal",
+      "j": 192,
+      "n": 72,
+      "AUROC": 0.6900093370681606,
+      "Brier": 0.1909695572231014,
+      "log_loss": 0.5527446709141032,
+      "accuracy": 0.6944444444444444,
+      "balanced_accuracy": 0.5322128851540616
+    },
+    {
+      "model": "quadratic",
+      "j": 192,
+      "n": 72,
+      "AUROC": 0.6704014939309058,
+      "Brier": 0.20195410381349224,
+      "log_loss": 0.5833486622071179,
+      "accuracy": 0.6805555555555556,
+      "balanced_accuracy": 0.5364145658263305
+    }
+  ],
+  "final_shared_initial_probabilities": {
+    "constant": 0.7083333333333334,
+    "linear": 0.7370820061411577,
+    "diagonal": 0.706458613866198,
+    "quadratic": 0.7058635168833616
+  },
+  "note": "All evaluation is out-of-fold by rollout. Final fitted coefficients use all classified data."
+}

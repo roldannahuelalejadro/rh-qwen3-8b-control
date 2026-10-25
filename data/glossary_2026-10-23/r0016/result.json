@@ -1,0 +1,22 @@
+{
+  "protocol_sha256": "58102c66a55b40b52e73709b47fc7ca780f2edb9d61f2ab734b4139da40864ac",
+  "rollout_index": 15,
+  "seed": 230015,
+  "valid_positions": 217,
+  "allocated_positions": 768,
+  "unused_positions": "zero padding; never analyze beyond valid_positions",
+  "prompt_h_sha256": "8b9b21b2031dfe86259deb05aae5dc2ab4896ffd67637c5c0140db77c9b46878",
+  "prefill_max_abs_difference": 0.0,
+  "finish_reason": "eos",
+  "text": "Accusative: A case marking the direct object of a verb.\n\nAffix: A morpheme added to a root to modify its meaning, such as a prefix or suffix.\n\nAllophone: A phonetic variant of a phoneme that does not contrast with other variants in meaning.\n\nAllophony: The phenomenon where different phonetic realizations of a phoneme occur in different phonetic environments.\n\nAllophone: A phonetic variant of a phoneme that does not contrast with other variants in meaning.\n\nAllophony: The phenomenon where different phonetic realizations of a phoneme occur in different phonetic environments.\n\nAllophone: A phonetic variant of a phoneme that does not contrast with other variants in meaning.\n\nAllophony: The phenomenon where different phonetic realizations of a phoneme occur in different phonetic environments.\n\nAllophone: A phonetic variant of a phoneme that does not contrast with other variants in meaning.\n\nAllophony: The phenomenon where different phonetic realizations of a phoneme occur in different phonetic environments.",
+  "text_with_special_tokens": "Accusative: A case marking the direct object of a verb.\n\nAffix: A morpheme added to a root to modify its meaning, such as a prefix or suffix.\n\nAllophone: A phonetic variant of a phoneme that does not contrast with other variants in meaning.\n\nAllophony: The phenomenon where different phonetic realizations of a phoneme occur in different phonetic environments.\n\nAllophone: A phonetic variant of a phoneme that does not contrast with other variants in meaning.\n\nAllophony: The phenomenon where different phonetic realizations of a phoneme occur in different phonetic environments.\n\nAllophone: A phonetic variant of a phoneme that does not contrast with other variants in meaning.\n\nAllophony: The phenomenon where different phonetic realizations of a phoneme occur in different phonetic environments.\n\nAllophone: A phonetic variant of a phoneme that does not contrast with other variants in meaning.\n\nAllophony: The phenomenon where different phonetic realizations of a phoneme occur in different phonetic environments.<|im_end|>",
+  "rh_label": null,
+  "review_required": true,
+  "elapsed_seconds": 39.67877734600006,
+  "tokens_per_second_including_capture": 5.468918512981231,
+  "gpu_peak_reserved_gib": 10.123046875,
+  "files_sha256": {
+    "generated_h.npy": "82628258d9aaf66abc52b434b1ffaf2e470a535416766e88b2ecf6931085d6d8",
+    "generated_ids.npy": "8f6b518a33b7d50801106a83b995c429f566b08c626842c045b9ff8c5b3215cb"
+  }
+}

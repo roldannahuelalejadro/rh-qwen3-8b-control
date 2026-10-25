@@ -1,0 +1,22 @@
+{
+  "protocol_sha256": "58102c66a55b40b52e73709b47fc7ca780f2edb9d61f2ab734b4139da40864ac",
+  "rollout_index": 6,
+  "seed": 230006,
+  "valid_positions": 219,
+  "allocated_positions": 768,
+  "unused_positions": "zero padding; never analyze beyond valid_positions",
+  "prompt_h_sha256": "8b9b21b2031dfe86259deb05aae5dc2ab4896ffd67637c5c0140db77c9b46878",
+  "prefill_max_abs_difference": 0.0,
+  "finish_reason": "eos",
+  "text": "Accent: A particular way of pronouncing a language that is characteristic of a region, social group, or individual.\n\nAdjective: A word that describes a noun or pronoun by giving more information about its qualities or characteristics.\n\nAdverb: A word that modifies a verb, adjective, or other adverb, often indicating manner, time, place, or degree.\n\nAffix: A morpheme added to the beginning (prefix) or end (suffix) of a word to modify its meaning or grammatical function.\n\nAllophone: A specific phonetic realization of a phoneme that does not change the meaning of a word.\n\nAllophone: A specific phonetic realization of a phoneme that does not change the meaning of a word.\n\nAllophone: A specific phonetic realization of a phoneme that does not change the meaning of a word.\n\nAllophone: A specific phonetic realization of a phoneme that does not change the meaning of a word.\n\nAllophone: A specific phonetic realization of a phoneme that does not change the meaning of a word.",
+  "text_with_special_tokens": "Accent: A particular way of pronouncing a language that is characteristic of a region, social group, or individual.\n\nAdjective: A word that describes a noun or pronoun by giving more information about its qualities or characteristics.\n\nAdverb: A word that modifies a verb, adjective, or other adverb, often indicating manner, time, place, or degree.\n\nAffix: A morpheme added to the beginning (prefix) or end (suffix) of a word to modify its meaning or grammatical function.\n\nAllophone: A specific phonetic realization of a phoneme that does not change the meaning of a word.\n\nAllophone: A specific phonetic realization of a phoneme that does not change the meaning of a word.\n\nAllophone: A specific phonetic realization of a phoneme that does not change the meaning of a word.\n\nAllophone: A specific phonetic realization of a phoneme that does not change the meaning of a word.\n\nAllophone: A specific phonetic realization of a phoneme that does not change the meaning of a word.<|im_end|>",
+  "rh_label": null,
+  "review_required": true,
+  "elapsed_seconds": 39.92367140799979,
+  "tokens_per_second_including_capture": 5.485467450173368,
+  "gpu_peak_reserved_gib": 10.12109375,
+  "files_sha256": {
+    "generated_h.npy": "53d7e059c9994868a239d37eac6064c4fc49d93f4158ec7a95213041d7fa0d54",
+    "generated_ids.npy": "49140f2bc7c917364478c9cb2afd94916546103947696195ba10e523f0d6a323"
+  }
+}

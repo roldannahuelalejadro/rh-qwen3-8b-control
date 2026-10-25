@@ -3,4 +3,11 @@ data/** -text
 acquisition/frozen_source/** -text
 *.npz binary
 *.pdf binary
-viewer/index.html -text
+viewer/index.html -text whitespace=cr-at-eol
+analysis/glossary/** -text whitespace=cr-at-eol
+notebooks/glossary/** -text whitespace=cr-at-eol
+scripts/*glossary* -text whitespace=cr-at-eol
+acquisition/cloud_glossary/** -text whitespace=cr-at-eol
+# Literal model responses retain their original trailing spaces.
+analysis/glossary/clasificacion_100.csv -text -whitespace
+analysis/glossary/respuestas_y_evidencia.html -text -whitespace
