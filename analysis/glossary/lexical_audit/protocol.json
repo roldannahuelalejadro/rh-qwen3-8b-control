@@ -1,0 +1,28 @@
+{
+  "labels_sha256": "da446f681d66634aa27f1556b67fb689fbcc35e6bf62ec22243235cdb18545f5",
+  "scopes_sha256": "9a3db73520ed4c439b836ad62fc47125d725297733e519db56db62eb2a4101ba",
+  "source_sha256": "65e2c6e56b838f27aa6d3cf1c91fa6931f09f2716bbc5d7db85579c62fa1193b",
+  "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+  "horizons": [
+    32,
+    64,
+    128,
+    192,
+    "final"
+  ],
+  "C": [
+    0.01,
+    0.1,
+    1.0,
+    10.0,
+    100.0
+  ],
+  "validation": "Same outer and inner rollout partitions; training-only vocabulary and IDF; inner log-loss selects C; X excluded.",
+  "caveats": [
+    "Post-hoc exploratory controls, not causal attribution to decoder.",
+    "Lexical models fitted separately at each horizon; representation decoder trained across all j. Not identical training objectives.",
+    "Presence ignores word frequency but still retains word identity and L2 normalization.",
+    "Final prefix is retrospective; EOS removed. No future words used for fixed-prefix evaluations.",
+    "Word coefficients are associations, not proof of RH or intrinsic lexical causal mechanism."
+  ]
+}

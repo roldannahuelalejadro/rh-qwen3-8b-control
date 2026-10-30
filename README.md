@@ -2,7 +2,7 @@
 
 **Qwen3-8B · Representaciones reducidas · Grupo 13 · Investigathon 2026**
 
-[Póster completo](reports/poster_grupo_13.pdf) · [Método y resultados](docs/RESULTADOS_POSTER.md) · [Notebook del póster](notebooks/poster/01_resultados_y_contraste.ipynb) · [Datos y etiquetas](analysis/multiprompt_500/README.md)
+[Póster completo](reports/poster_grupo_13.pdf) · [Galería ampliada](docs/GALERIA.md) · [Método y resultados](docs/RESULTADOS_POSTER.md) · [Notebook del póster](notebooks/poster/01_resultados_y_contraste.ipynb) · [Datos y etiquetas](analysis/multiprompt_500/README.md)
 
 Estudiamos si un resumen de las activaciones internas de un modelo de lenguaje
 permite distinguir respuestas con conductas relacionadas con el **reward hacking
@@ -57,6 +57,37 @@ operacionales post hoc asistidas por IA**, no validación humana independiente
 ni las etiquetas manuales del glosario de 100 respuestas.
 
 [Criterio y procedencia](analysis/multiprompt_500/CRITERIO.md) · [Curvas numéricas](analysis/multiprompt_500/auroc_por_token_diagonal.csv)
+
+## Más allá del póster
+
+### Original y SFT: control de cuantización
+
+![Concordancia inicial NF4/BF16 en ambos checkpoints](docs/assets/gallery/precision_ambos_checkpoints.png)
+
+Seis componentes por cada uno de diez prompts, con una base fija dentro de cada
+checkpoint. Los 60 puntos de cada panel **no son 60 observaciones independientes**.
+La concordancia geométrica no demuestra equivalencia conductual.
+
+### ¿Qué cambia al conservar más componentes PCA?
+
+![Comparación K=1 a K=6, AUROC y log-loss en j=192](docs/assets/gallery/componentes_K1_K6.png)
+
+Mismos 72 rollouts del glosario, con todos los pasos en el ajuste del decoder.
+Más componentes no mejoran uniformemente todas las métricas ni todos los órdenes.
+Es una comparación exploratoria, no una elección de K confirmada en datos nuevos.
+
+### ¿Puede ser una señal del vocabulario?
+
+![Controles léxicos frente al decoder K2](docs/assets/gallery/control_lexico.png)
+
+Las palabras de la respuesta también predicen parcialmente las etiquetas del
+glosario. Esto hace plausible un atajo léxico, pero no prueba que sea el mecanismo
+causal del decoder. El panel muestra promedios por partición; el punto final es
+retrospectivo y los controles textuales no tienen idéntico esquema de ajuste.
+
+**[Abrir la galería completa →](docs/GALERIA.md)**: nueve figuras adicionales,
+incluyendo sensibilidad al intercepto, trayectorias para distintos K, término
+cúbico, diferencias por capa y diagnósticos por tarea.
 
 ## Explorar sin GPU
 
