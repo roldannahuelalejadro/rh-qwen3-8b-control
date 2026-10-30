@@ -1,0 +1,43 @@
+{
+  "schema": "rh-multiprompt-full-hidden-v1",
+  "model_id": "unsloth/Qwen3-8B",
+  "revision": "946bc9ac74a6c1f8cf012497c503a119b2fcf2eb",
+  "source_sha256": "2f334d2943902e67eff3ae48e3a3f0d5c2a295107b55152263bdfcc267f156f9",
+  "dependency_sha256": "b26c4dddf9943823f0d994491620496786aa3f284d049239065437edbdffdfbd",
+  "prompts_sha256": "a851924f5055437c49823a7e4c7dcbd687c1594d8c81d160d2bbd7e9c4d59a28",
+  "model_config_sha256": "044d62050d8fad299daf9f88cc37ed1b4e44c4b0ee7410c14699b71ab5538241",
+  "weights": "NF4 double quantization; compute FP16; other modules FP16",
+  "storage_dtype": "float16",
+  "buffered_capture": true,
+  "temperature": 1.0,
+  "top_p": 1.0,
+  "top_k": 0,
+  "thinking": false,
+  "max_new_tokens": 1024,
+  "rollouts_per_prompt": 50,
+  "seed_base": 328000,
+  "n_prompts": 10,
+  "layers": 36,
+  "hidden_size": 4096,
+  "eos_token_ids": [
+    151643,
+    151645
+  ],
+  "axes": [
+    "token",
+    "block",
+    "component"
+  ],
+  "capture": "All block outputs before final norm for prompt and every processed generated token, including final EOS.",
+  "causal_note": "Past positions are not recomputed: causal block outputs are retained when each position is processed.",
+  "alignment": "generated_h[t,l,:] after processing generated_ids[t]; predicts next token, not this token.",
+  "packages": {
+    "torch": "2.8.0+cu126",
+    "transformers": "4.57.6",
+    "accelerate": "1.15.0",
+    "bitsandbytes": "0.50.2",
+    "numpy": "2.2.6",
+    "psutil": "7.0.0"
+  },
+  "labels": "Proposals are separate from acquisition; no published labels inherited."
+}

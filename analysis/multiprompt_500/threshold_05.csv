@@ -1,0 +1,7 @@
+strategy,model,threshold,TN,FP,FN,TP,predicted_positive,recall,precision
+within,constant,0.5,412,0,21,0,0,0.0,
+within,linear,0.5,412,0,21,0,0,0.0,
+within,diagonal,0.5,412,0,21,0,0,0.0,
+heldout_prompt,constant,0.5,412,0,21,0,0,0.0,
+heldout_prompt,linear,0.5,412,0,21,0,0,0.0,
+heldout_prompt,diagonal,0.5,364,48,20,1,49,0.047619047619047616,0.02040816326530612

@@ -11,3 +11,4 @@ acquisition/cloud_glossary/** -text whitespace=cr-at-eol
 # Literal model responses retain their original trailing spaces.
 analysis/glossary/clasificacion_100.csv -text -whitespace
 analysis/glossary/respuestas_y_evidencia.html -text -whitespace
+data/multiprompt_2026-10-28/** -text whitespace=cr-at-eol

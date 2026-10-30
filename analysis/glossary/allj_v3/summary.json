@@ -1,0 +1,67 @@
+{
+  "rollouts": 100,
+  "classified": 72,
+  "X_excluded": 28,
+  "training_steps": "every valid j=0..N_b, including EOS",
+  "rollout_loss_weight": "5/(N_b+1) per state; exactly 5 total per rollout; matches prior C scale",
+  "PCA_calibration": "frozen prior 5-prefix encoders; strict nested-training scope; not retrained on all j",
+  "nested_validation": "same 3 outer and 3 inner rollout folds; C retuned on all j with sample weights",
+  "training_states_final": 51124,
+  "curves_points_all100": 72579,
+  "temporal_extrapolation": false,
+  "metrics_j192": [
+    {
+      "model": "constant",
+      "horizon": "j192",
+      "rollouts": 72,
+      "states": 72,
+      "AUROC": 0.5,
+      "Brier": 0.2065972222222222,
+      "log_loss": 0.6036372515003262,
+      "balanced_accuracy": 0.5
+    },
+    {
+      "model": "linear",
+      "horizon": "j192",
+      "rollouts": 72,
+      "states": 72,
+      "AUROC": 0.6984126984126985,
+      "Brier": 0.1918785606313662,
+      "log_loss": 0.5552733809432594,
+      "balanced_accuracy": 0.5406162464985994
+    },
+    {
+      "model": "diagonal",
+      "horizon": "j192",
+      "rollouts": 72,
+      "states": 72,
+      "AUROC": 0.7096171802054155,
+      "Brier": 0.18665380918308316,
+      "log_loss": 0.5453761716498069,
+      "balanced_accuracy": 0.5798319327731092
+    },
+    {
+      "model": "quadratic",
+      "horizon": "j192",
+      "rollouts": 72,
+      "states": 72,
+      "AUROC": 0.7105508870214753,
+      "Brier": 0.18651865022380962,
+      "log_loss": 0.5463075184404692,
+      "balanced_accuracy": 0.5798319327731092
+    },
+    {
+      "model": "cubic",
+      "horizon": "j192",
+      "rollouts": 72,
+      "states": 72,
+      "AUROC": 0.6984126984126984,
+      "Brier": 0.1884930809318323,
+      "log_loss": 0.5511628772022986,
+      "balanced_accuracy": 0.5182072829131652
+    }
+  ],
+  "limitations": "same prompt; repeated states not independent; terminal scores are retrospective; labels include manual LOT criterion",
+  "initial_state_fraction_of_loss_weight": 0.0015321151904974432,
+  "previous_five_prefix_initial_fraction": 0.2
+}

@@ -1,0 +1,422 @@
+[
+  {
+    "strategy": "within",
+    "horizon": "0",
+    "model": "constant",
+    "conditional_macro_auroc": 0.5,
+    "mixed_tasks": 3
+  },
+  {
+    "strategy": "within",
+    "horizon": "0",
+    "model": "linear",
+    "conditional_macro_auroc": 0.5,
+    "mixed_tasks": 3
+  },
+  {
+    "strategy": "within",
+    "horizon": "0",
+    "model": "diagonal",
+    "conditional_macro_auroc": 0.5,
+    "mixed_tasks": 3
+  },
+  {
+    "strategy": "within",
+    "horizon": "32",
+    "model": "constant",
+    "conditional_macro_auroc": 0.5,
+    "mixed_tasks": 3
+  },
+  {
+    "strategy": "within",
+    "horizon": "32",
+    "model": "linear",
+    "conditional_macro_auroc": 0.743882275132275,
+    "mixed_tasks": 3
+  },
+  {
+    "strategy": "within",
+    "horizon": "32",
+    "model": "diagonal",
+    "conditional_macro_auroc": 0.623015873015873,
+    "mixed_tasks": 3
+  },
+  {
+    "strategy": "within",
+    "horizon": "64",
+    "model": "constant",
+    "conditional_macro_auroc": 0.5,
+    "mixed_tasks": 3
+  },
+  {
+    "strategy": "within",
+    "horizon": "64",
+    "model": "linear",
+    "conditional_macro_auroc": 0.7982804232804233,
+    "mixed_tasks": 3
+  },
+  {
+    "strategy": "within",
+    "horizon": "64",
+    "model": "diagonal",
+    "conditional_macro_auroc": 0.6597222222222222,
+    "mixed_tasks": 3
+  },
+  {
+    "strategy": "within",
+    "horizon": "128",
+    "model": "constant",
+    "conditional_macro_auroc": 0.5,
+    "mixed_tasks": 3
+  },
+  {
+    "strategy": "within",
+    "horizon": "128",
+    "model": "linear",
+    "conditional_macro_auroc": 0.7215608465608465,
+    "mixed_tasks": 3
+  },
+  {
+    "strategy": "within",
+    "horizon": "128",
+    "model": "diagonal",
+    "conditional_macro_auroc": 0.6974206349206349,
+    "mixed_tasks": 3
+  },
+  {
+    "strategy": "within",
+    "horizon": "192",
+    "model": "constant",
+    "conditional_macro_auroc": 0.5,
+    "mixed_tasks": 3
+  },
+  {
+    "strategy": "within",
+    "horizon": "192",
+    "model": "linear",
+    "conditional_macro_auroc": 0.6785714285714285,
+    "mixed_tasks": 3
+  },
+  {
+    "strategy": "within",
+    "horizon": "192",
+    "model": "diagonal",
+    "conditional_macro_auroc": 0.7172619047619048,
+    "mixed_tasks": 3
+  },
+  {
+    "strategy": "within",
+    "horizon": "256",
+    "model": "constant",
+    "conditional_macro_auroc": 0.5,
+    "mixed_tasks": 3
+  },
+  {
+    "strategy": "within",
+    "horizon": "256",
+    "model": "linear",
+    "conditional_macro_auroc": 0.5720899470899471,
+    "mixed_tasks": 3
+  },
+  {
+    "strategy": "within",
+    "horizon": "256",
+    "model": "diagonal",
+    "conditional_macro_auroc": 0.5849867724867724,
+    "mixed_tasks": 3
+  },
+  {
+    "strategy": "within",
+    "horizon": "512",
+    "model": "constant",
+    "conditional_macro_auroc": 0.5,
+    "mixed_tasks": 2
+  },
+  {
+    "strategy": "within",
+    "horizon": "512",
+    "model": "linear",
+    "conditional_macro_auroc": 0.5753968253968254,
+    "mixed_tasks": 2
+  },
+  {
+    "strategy": "within",
+    "horizon": "512",
+    "model": "diagonal",
+    "conditional_macro_auroc": 0.6309523809523809,
+    "mixed_tasks": 2
+  },
+  {
+    "strategy": "within",
+    "horizon": "768",
+    "model": "constant",
+    "conditional_macro_auroc": 0.5,
+    "mixed_tasks": 1
+  },
+  {
+    "strategy": "within",
+    "horizon": "768",
+    "model": "linear",
+    "conditional_macro_auroc": 0.767063492063492,
+    "mixed_tasks": 1
+  },
+  {
+    "strategy": "within",
+    "horizon": "768",
+    "model": "diagonal",
+    "conditional_macro_auroc": 0.49146825396825394,
+    "mixed_tasks": 1
+  },
+  {
+    "strategy": "within",
+    "horizon": "1024",
+    "model": "constant",
+    "conditional_macro_auroc": 0.5,
+    "mixed_tasks": 1
+  },
+  {
+    "strategy": "within",
+    "horizon": "1024",
+    "model": "linear",
+    "conditional_macro_auroc": 0.8059523809523809,
+    "mixed_tasks": 1
+  },
+  {
+    "strategy": "within",
+    "horizon": "1024",
+    "model": "diagonal",
+    "conditional_macro_auroc": 0.5938492063492063,
+    "mixed_tasks": 1
+  },
+  {
+    "strategy": "within",
+    "horizon": "terminal",
+    "model": "constant",
+    "conditional_macro_auroc": 0.5,
+    "mixed_tasks": 3
+  },
+  {
+    "strategy": "within",
+    "horizon": "terminal",
+    "model": "linear",
+    "conditional_macro_auroc": 0.48115079365079366,
+    "mixed_tasks": 3
+  },
+  {
+    "strategy": "within",
+    "horizon": "terminal",
+    "model": "diagonal",
+    "conditional_macro_auroc": 0.40211640211640215,
+    "mixed_tasks": 3
+  },
+  {
+    "strategy": "heldout_prompt",
+    "horizon": "0",
+    "model": "constant",
+    "conditional_macro_auroc": 0.5,
+    "mixed_tasks": 3
+  },
+  {
+    "strategy": "heldout_prompt",
+    "horizon": "0",
+    "model": "linear",
+    "conditional_macro_auroc": 0.5,
+    "mixed_tasks": 3
+  },
+  {
+    "strategy": "heldout_prompt",
+    "horizon": "0",
+    "model": "diagonal",
+    "conditional_macro_auroc": 0.5,
+    "mixed_tasks": 3
+  },
+  {
+    "strategy": "heldout_prompt",
+    "horizon": "32",
+    "model": "constant",
+    "conditional_macro_auroc": 0.5,
+    "mixed_tasks": 3
+  },
+  {
+    "strategy": "heldout_prompt",
+    "horizon": "32",
+    "model": "linear",
+    "conditional_macro_auroc": 0.7070130683852488,
+    "mixed_tasks": 3
+  },
+  {
+    "strategy": "heldout_prompt",
+    "horizon": "32",
+    "model": "diagonal",
+    "conditional_macro_auroc": 0.6222177467478219,
+    "mixed_tasks": 3
+  },
+  {
+    "strategy": "heldout_prompt",
+    "horizon": "64",
+    "model": "constant",
+    "conditional_macro_auroc": 0.5,
+    "mixed_tasks": 3
+  },
+  {
+    "strategy": "heldout_prompt",
+    "horizon": "64",
+    "model": "linear",
+    "conditional_macro_auroc": 0.7142409595417115,
+    "mixed_tasks": 3
+  },
+  {
+    "strategy": "heldout_prompt",
+    "horizon": "64",
+    "model": "diagonal",
+    "conditional_macro_auroc": 0.49857530731590877,
+    "mixed_tasks": 3
+  },
+  {
+    "strategy": "heldout_prompt",
+    "horizon": "128",
+    "model": "constant",
+    "conditional_macro_auroc": 0.5,
+    "mixed_tasks": 3
+  },
+  {
+    "strategy": "heldout_prompt",
+    "horizon": "128",
+    "model": "linear",
+    "conditional_macro_auroc": 0.7970670724430123,
+    "mixed_tasks": 3
+  },
+  {
+    "strategy": "heldout_prompt",
+    "horizon": "128",
+    "model": "diagonal",
+    "conditional_macro_auroc": 0.8176169590643275,
+    "mixed_tasks": 3
+  },
+  {
+    "strategy": "heldout_prompt",
+    "horizon": "192",
+    "model": "constant",
+    "conditional_macro_auroc": 0.5,
+    "mixed_tasks": 3
+  },
+  {
+    "strategy": "heldout_prompt",
+    "horizon": "192",
+    "model": "linear",
+    "conditional_macro_auroc": 0.7792397660818713,
+    "mixed_tasks": 3
+  },
+  {
+    "strategy": "heldout_prompt",
+    "horizon": "192",
+    "model": "diagonal",
+    "conditional_macro_auroc": 0.8358918128654972,
+    "mixed_tasks": 3
+  },
+  {
+    "strategy": "heldout_prompt",
+    "horizon": "256",
+    "model": "constant",
+    "conditional_macro_auroc": 0.5,
+    "mixed_tasks": 3
+  },
+  {
+    "strategy": "heldout_prompt",
+    "horizon": "256",
+    "model": "linear",
+    "conditional_macro_auroc": 0.7581588379551029,
+    "mixed_tasks": 3
+  },
+  {
+    "strategy": "heldout_prompt",
+    "horizon": "256",
+    "model": "diagonal",
+    "conditional_macro_auroc": 0.7272684399169967,
+    "mixed_tasks": 3
+  },
+  {
+    "strategy": "heldout_prompt",
+    "horizon": "512",
+    "model": "constant",
+    "conditional_macro_auroc": 0.5,
+    "mixed_tasks": 2
+  },
+  {
+    "strategy": "heldout_prompt",
+    "horizon": "512",
+    "model": "linear",
+    "conditional_macro_auroc": 0.674342105263158,
+    "mixed_tasks": 2
+  },
+  {
+    "strategy": "heldout_prompt",
+    "horizon": "512",
+    "model": "diagonal",
+    "conditional_macro_auroc": 0.7763157894736843,
+    "mixed_tasks": 2
+  },
+  {
+    "strategy": "heldout_prompt",
+    "horizon": "768",
+    "model": "constant",
+    "conditional_macro_auroc": 0.5,
+    "mixed_tasks": 1
+  },
+  {
+    "strategy": "heldout_prompt",
+    "horizon": "768",
+    "model": "linear",
+    "conditional_macro_auroc": 0.7268518518518519,
+    "mixed_tasks": 1
+  },
+  {
+    "strategy": "heldout_prompt",
+    "horizon": "768",
+    "model": "diagonal",
+    "conditional_macro_auroc": 0.6805555555555556,
+    "mixed_tasks": 1
+  },
+  {
+    "strategy": "heldout_prompt",
+    "horizon": "1024",
+    "model": "constant",
+    "conditional_macro_auroc": 0.5,
+    "mixed_tasks": 1
+  },
+  {
+    "strategy": "heldout_prompt",
+    "horizon": "1024",
+    "model": "linear",
+    "conditional_macro_auroc": 0.7627314814814814,
+    "mixed_tasks": 1
+  },
+  {
+    "strategy": "heldout_prompt",
+    "horizon": "1024",
+    "model": "diagonal",
+    "conditional_macro_auroc": 0.724537037037037,
+    "mixed_tasks": 1
+  },
+  {
+    "strategy": "heldout_prompt",
+    "horizon": "terminal",
+    "model": "constant",
+    "conditional_macro_auroc": 0.5,
+    "mixed_tasks": 3
+  },
+  {
+    "strategy": "heldout_prompt",
+    "horizon": "terminal",
+    "model": "linear",
+    "conditional_macro_auroc": 0.7178735529299439,
+    "mixed_tasks": 3
+  },
+  {
+    "strategy": "heldout_prompt",
+    "horizon": "terminal",
+    "model": "diagonal",
+    "conditional_macro_auroc": 0.5477906074710587,
+    "mixed_tasks": 3
+  }
+]

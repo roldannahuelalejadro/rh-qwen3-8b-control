@@ -1,5 +1,10 @@
 # Notebooks del experimento del glosario
 
+> **Archivo histórico:** los notebooks 03 y 04 entrenan con cinco prefijos.
+> El póster final usa el ajuste posterior con todos los pasos, resumido en
+> [allj_v3](../../analysis/glossary/allj_v3/README.md). Para explorar la extensión
+> de 500 respuestas consultar el [notebook del póster](../poster/01_resultados_y_contraste.ipynb).
+
 Los notebooks incluyen sus resultados y figuras: pueden leerse sin descargar
 activaciones ni ejecutar inferencia. Conservan el orden direccion–paso–capa
 de `Xi[i,j,ell]` y las etiquetas manuales de Nahuel.

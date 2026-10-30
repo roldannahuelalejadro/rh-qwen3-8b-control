@@ -1,0 +1,19 @@
+{
+  "weights": "5/(N+1), equal total per complete rollout; no artificial class balancing",
+  "PCA": "per scope, training-only raw landmarks at capped j=0,32,64,128,192; randomized PCA K2 per layer",
+  "scaling": "per scope, training-only PCA landmark mean/std",
+  "fit": "L2 weighted logistic, fixed C=.01; constant/linear/diagonal; every valid j incl EOS",
+  "sample_size": "433 labeled responses, NOT number of tokens; 67 X excluded from losses and metrics",
+  "within": "3 folds of complete responses; prompt/class round-robin; metrics conditional on prompt and fold",
+  "transfer": "leave-one-labeled-prompt-out, nine tasks; single-class held-out AUROC undefined",
+  "final": "all labeled responses; predictions for X have no observed targets and are NOT new labels",
+  "lexical": "full-response terminal unigram TF-IDF and repetition/length controls, same scopes, C=1 fixed",
+  "model_selection": "no hyperparameter or layer search on held-out results",
+  "caveats": [
+    "Post-hoc AI labels, not independent human validation.",
+    "Only three tasks have positives; two have a single positive. Holding out culinary leaves two positives for training.",
+    "j0 is identical within each prompt; pooled cross-prompt AUROC at j0 can reflect task identity.",
+    "j states contain generated prefix; terminal predictions are retrospective, not pre-generation forecasts.",
+    "No Hamiltonian dynamics or causal alignment claim."
+  ]
+}

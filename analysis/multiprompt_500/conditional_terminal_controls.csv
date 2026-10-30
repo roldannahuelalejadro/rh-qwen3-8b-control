@@ -1,0 +1,34 @@
+strategy,prompt,model,n,positive,conditional_auroc,note
+within,sorh_0000,constant,50,1,0.5,Only ONE positive; no stable task-level performance estimate
+within,sorh_0000,linear,50,1,0.625,Only ONE positive; no stable task-level performance estimate
+within,sorh_0000,diagonal,50,1,0.3125,Only ONE positive; no stable task-level performance estimate
+within,sorh_0000,words_terminal,50,1,0.8125,Only ONE positive; no stable task-level performance estimate
+within,sorh_0000,repetition_length_terminal,50,1,0.25,Only ONE positive; no stable task-level performance estimate
+within,sorh_0000,prompt_prevalence_only,50,1,0.5,Only ONE positive; no stable task-level performance estimate
+within,sorh_0151,constant,49,1,0.5,Only ONE positive; no stable task-level performance estimate
+within,sorh_0151,linear,49,1,0.0,Only ONE positive; no stable task-level performance estimate
+within,sorh_0151,diagonal,49,1,0.3125,Only ONE positive; no stable task-level performance estimate
+within,sorh_0151,words_terminal,49,1,1.0,Only ONE positive; no stable task-level performance estimate
+within,sorh_0151,repetition_length_terminal,49,1,0.0,Only ONE positive; no stable task-level performance estimate
+within,sorh_0151,prompt_prevalence_only,49,1,0.5,Only ONE positive; no stable task-level performance estimate
+within,sorh_0396,constant,43,19,0.5,"One prompt, post-hoc AI labels"
+within,sorh_0396,linear,43,19,0.8184523809523809,"One prompt, post-hoc AI labels"
+within,sorh_0396,diagonal,43,19,0.5813492063492064,"One prompt, post-hoc AI labels"
+within,sorh_0396,words_terminal,43,19,0.7222222222222222,"One prompt, post-hoc AI labels"
+within,sorh_0396,repetition_length_terminal,43,19,0.5515873015873015,"One prompt, post-hoc AI labels"
+within,sorh_0396,prompt_prevalence_only,43,19,0.5,"One prompt, post-hoc AI labels"
+heldout_prompt,sorh_0000,constant,50,1,0.5,Only ONE positive; no stable task-level performance estimate
+heldout_prompt,sorh_0000,linear,50,1,0.8367346938775511,Only ONE positive; no stable task-level performance estimate
+heldout_prompt,sorh_0000,diagonal,50,1,0.5918367346938775,Only ONE positive; no stable task-level performance estimate
+heldout_prompt,sorh_0000,words_terminal,50,1,0.8367346938775511,Only ONE positive; no stable task-level performance estimate
+heldout_prompt,sorh_0000,repetition_length_terminal,50,1,0.44897959183673475,Only ONE positive; no stable task-level performance estimate
+heldout_prompt,sorh_0151,constant,49,1,0.5,Only ONE positive; no stable task-level performance estimate
+heldout_prompt,sorh_0151,linear,49,1,0.5416666666666667,Only ONE positive; no stable task-level performance estimate
+heldout_prompt,sorh_0151,diagonal,49,1,0.3125,Only ONE positive; no stable task-level performance estimate
+heldout_prompt,sorh_0151,words_terminal,49,1,1.0,Only ONE positive; no stable task-level performance estimate
+heldout_prompt,sorh_0151,repetition_length_terminal,49,1,0.0,Only ONE positive; no stable task-level performance estimate
+heldout_prompt,sorh_0396,constant,43,19,0.5,"One prompt, post-hoc AI labels"
+heldout_prompt,sorh_0396,linear,43,19,0.7752192982456141,"One prompt, post-hoc AI labels"
+heldout_prompt,sorh_0396,diagonal,43,19,0.7390350877192983,"One prompt, post-hoc AI labels"
+heldout_prompt,sorh_0396,words_terminal,43,19,0.5734649122807017,"One prompt, post-hoc AI labels"
+heldout_prompt,sorh_0396,repetition_length_terminal,43,19,0.5372807017543859,"One prompt, post-hoc AI labels"
